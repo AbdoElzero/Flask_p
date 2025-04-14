@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.form-container {
+    padding-top: 40px;
+}
+.form-container .head {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.form-container .head img {
+    width: 60px;
+    height: 60px;
+}
+.form-container .head h2 {
+    margin: 0;
+    color: #1268b1;
+    font-size: 26px;
+}
+.form-container .head-two {
+    margin-bottom: 40px;
+    background-color: #1075cbed;
+    padding: 4px 60px;
+}
+.form-container .head-two .row {
+    align-items: center;
+}
+.form-container .head-two .left h3 {
+    color: #fff;
+    margin-bottom: 3px;
+}
+.form-container .head-two .right {
+    text-align: end;
+}
+.form-container .head-two .right a,
+.form-container .head-two .right em {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+.form-container form .one label {
+    display: block;
+    margin-bottom: 6px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+}
+.form-container form .one input {
+    width: 100%;
+    margin-bottom: 16px;
+    outline: none;
+    font-size: 14px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    color: #555;
+}
+.form-container form .one label::after {
+    content: "*";
+    position: absolute;
+    color: #f00;
+}
+.form-container button {
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 10px 24px;
+    border-radius: 7px;
+    background: #1268B3;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}

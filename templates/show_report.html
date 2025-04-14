@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>عرض التقرير</title>
+    <link rel="icon" type="jpg" href="../static/img/logo.png" />
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/all.min.css" />
+    <link rel="stylesheet" href="../static/css/report.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="report-container">
+      <div class="container">
+        <div class="head">
+          <img src="../static/img/logo.png" alt="" />
+          <h2>وزارة العمل جمهورية مصر العربية</h2>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="head-two">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="left">
+                <h3>شهادة مخالصة سداد نسبة العمالة غير المنتظمة</h3>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="right">
+                <a href="{{ url_for('home') }}">الصفحة الرئيسية</a>
+                <em>></em>
+                <a href="{{ url_for('show_report', report_id=report.id) }}"
+                  >شهادة المخالصة</a
+                >
+                <em>></em>
+                <a href="{{ url_for('login') }}">تسجيل الخروج</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="box-one">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="num1">
+                <h2>مديرية عمل الغربيه</h2>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="num1 and2">
+                <img src="../static/img/logo.png" alt="" />
+                <p>شهادة مخالصة سداد نسبة العمالة غير المنتظمة</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="num1 nu">
+                <img
+                  src="{{ url_for('static', filename='qrcodes/' ~ report.report_id ~ '.png') }}"
+                  alt="QR Code"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-two">
+          <p>السادة جهة الاسناد : مركز السنطه</p>
+          <p>
+            اعمالا لاحكام المادة (26) من قانون العمل الصادر بالقانون رقم 12 لسنة
+            2003 و تنفيزا للقرار الوزاري رقم 168 لسنة 2007 و المعدل بالقرار
+            الوزاري 162 لسنة 2019 تشهد ادارة العمالة غير المنتظمة ب مديرية عمل
+            الغربيه
+          </p>
+        </div>
+        <div class="row">
+          <div style="width: 33%" class="col-sm-4 col-md-4">
+            <span>ايماء الي الطلب المقدم من جهة التنفيذ</span>
+          </div>
+          <div style="width: 67%" class="col-sm-3 col-md-3">
+            <span> {{ report["field1"] }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div style="width: 33%" class="col-sm-4 col-md-4">
+            <span>و المسند اليها عملية</span>
+          </div>
+          <div style="width: 67%" class="col-sm-3 col-md-3">
+            <span> {{ report["field2"] }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div style="width: 25%" class="col-sm-4 col-md-3">
+            <span>عقد رقم</span>
+          </div>
+          <div style="width: 25%" class="col-md-3"></div>
+          <div style="width: 25%" class="col-sm-3 col-md-3">
+            <span>بقيمة اجمالية</span>
+          </div>
+          <div style="width: 25%" class="col-md-3"></div>
+        </div>
+        <div class="row">
+          <div style="width: 25%" class="col-sm-4 col-md-3">
+            <span>عن مستخلص</span>
+          </div>
+          <div style="width: 25%" class="col-md-3">
+            <span>{{ report["field3"] }}</span>
+          </div>
+          <div style="width: 25%" class="col-sm-3 col-md-3">
+            <span>بقيمة</span>
+          </div>
+          <div style="width: 25%" class="col-md-3">
+            <span>{{ report["field4"] }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div style="width: 25%" class="col-sm-4 col-md-3">
+            <span>عن جارى من او فواتير</span>
+          </div>
+          <div style="width: 75%" class="col-sm-3 col-md-3">
+            <span> {{ report["field5"] }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div style="width: 16%" class="col-sm-4 col-md-3">
+            <span>نوع المخالصة</span>
+          </div>
+          <div style="width: 16%" class="col-md-3">
+            <span>{{ report["field6"] }}</span>
+          </div>
+          <div style="width: 17%" class="col-sm-3 col-md-3">
+            <span>في مدة من</span>
+          </div>
+          <div style="width: 16%" class="col-md-3">
+            <span>{{ report["field7"] }}</span>
+          </div>
+          <div style="width: 16%" class="col-md-3">
+            <span>الي</span>
+          </div>
+          <div style="width: 16%" class="col-md-3">
+            <span>{{ report["field8"] }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div style="width: 100%" class="col-sm-4 col-md-12">
+            <span
+              >و قد قامت بسداد النسبة القانونية الاداره تشغيل ورعاية و حماية
+              العمالة غير المنتظمة ب مديرية عمل الغربيه</span
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div style="width: 25%" class="col-sm-4 col-md-3">
+            <span>بايصال رقم</span>
+          </div>
+          <div style="width: 25%" class="col-sm-3 col-md-3">
+            <span> {{ report["field9"] }}</span>
+          </div>
+          <div style="width: 25%" class="col-sm-4 col-md-3">
+            <span>بحساب البريد المصري رقم</span>
+          </div>
+          <div style="width: 25%" class="col-sm-3 col-md-3">
+            <span> {{ report["field10"] }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div style="width: 15%" class="col-sm-4 col-md-3">
+            <span>مبلغ وقدره</span>
+          </div>
+          <div style="width: 20%" class="col-sm-3 col-md-3">
+            <span> {{ report["field11"] }}</span>
+          </div>
+          <div style="width: 65%" class="col-sm-3 col-md-3">
+            <span> {{ report["field12"] }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div style="width: 25%" class="col-sm-4 col-md-3">
+            <span>ملحوظة</span>
+          </div>
+          <div style="width: 75%" class="col-sm-3 col-md-3">
+            <span>تم سداد المبلغ</span>
+          </div>
+        </div>
+        <div class="row">
+          <div style="width: 100%" class="col-sm-4 col-md-12">
+            <span
+              >و بذلك لا يوجد مانع من صرف مستحقاته في نطاق البيانات المشار اليها
+              بعالية</span
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div
+          style="
+             width: 17%"
+            class="col-sm-4 col-md-3"
+          >
+            <span>كود العملية بالوزارة</span>
+          </div>
+          <div style="width: 16%" class="col-md-3">
+            <span>{{ report["field13"] }}</span>
+          </div>
+          <div style="width: 16%" class="col-sm-3 col-md-3">
+            <span>رقم المخالصة</span>
+          </div>
+          <div style="width: 16%" class="col-md-3">
+            <span>{{ report["field14"] }}</span>
+          </div>
+          <div style="width: 16%" class="col-md-3">
+            <span>كلمة المرور</span>
+          </div>
+          <div style="width: 16%" class="col-md-3">
+            <span>{{ report["field15"] }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div style="width: 25%" class="col-sm-4 col-md-12">
+            <span>تم اعتماد المخالصة فى تاريخ</span>
+          </div>
+          <div style="width: 25%" class="col-sm-4 col-md-12">
+            <span> {{ report["field16"] }}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div style="width: 100%" class="col-sm-4 col-md-12">
+            <span
+              >يمكنك الاستعلام عن المخالصة عن طريق المسح على الكيو ار كود او من
+              رقم المخاصة وكلمة المرور من خلال الموقع</span
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div style="width: 100%" class="col-sm-4 col-md-12">
+            <span class="link-one"
+              ><a href="{{ report['report_link'] }}"
+                >{{ report['report_link'] }}</a
+              ></span
+            >
+          </div>
+        </div>
+        <div class="print">
+          <div class="">
+            <span>
+              <button onclick="window.print()">طباعة</button>
+            </span>
+          </div>
+          <div class="">
+            <a
+              style="margin-right: 20px"
+              class="link-two"
+              href="{{ url_for('saved_reports') }}"
+              >التقارير المحفوظة</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

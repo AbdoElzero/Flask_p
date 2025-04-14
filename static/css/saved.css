@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: #FFFFFF;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #1268b1;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #1268b1;
+}
+.tables-three {
+    border: 1px solid #F1F1F1;
+    border-radius: 5px;
+    border-spacing: 0;
+    margin-bottom: 16px;
+}
+.tables-three .responsive-table {
+    overflow-x: auto;
+}
+.tables-three .responsive-table table {
+    min-width: 1400px;
+    width: 100%;
+}
+.tables-three .responsive-table table thead {
+    border: 1px solid #6A829B1A;
+    border-top: none;
+}
+.tables-three .responsive-table table thead td {
+    font-size: 11px;
+    font-weight: 500;
+    color:  #6A829B;
+}
+.tables-three .responsive-table table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #6A829B1A;
+}
+.tables-three .responsive-table table tbody td {
+    font-size: 12px;
+    font-weight: 500;
+    color: #1e1e1e;
+}
+.tables-three .responsive-table table tr {
+    text-align: center;
+}
+th {
+    padding: 6px 0px;
+    font-size: 14px;
+}
+tbody a {
+    padding: 2px 14px;
+    font-size: 14px;
+    text-decoration: none;
+    background: #1268B3;
+    color: #fff;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    display: inline-block;
+
+}
+tbody a:hover {
+    color: #fff;
+}
+.but {
+    padding: 2px 14px !important;
+    font-size: 14px !important;
+}
+p {
+    font-size: 22px;
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-style: italic;
+}

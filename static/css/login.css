@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login-container {
+    background-image: url("../img/icon_E.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    padding-top: 50PX;
+}
+.login-container .login-left .info {
+    display: flex;
+    align-items: center;
+    gap: 20PX;
+}
+.login-container .login-left .info h2 {
+    font-size: 25px;
+    color: #555;
+    position: relative;
+    margin: 0;
+    margin-right: 20px;
+}
+.login-container .login-left .info h2::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background-color: #eee;
+    margin-top: -15px;
+    margin-right: -20px;
+}
+.login-container .login-left .info img {
+    width: 60px;
+    height: 60px;
+}
+.login-container .login-right .log-form {
+    margin-bottom: 40px;
+}
+.login-container .login-right .log-form h2 {
+    color: #555;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.login-container .login-right .log-form .one {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+.login-container .login-right .log-form .one label {
+    width: 20%;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+.login-container .login-right .log-form .one .group {
+    width: 100%;
+    position: relative;
+}
+.login-container .login-right .log-form .one input {
+    outline: none;
+    font-size: 14px;
+    padding: 4px 40px;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding-left: 6px;
+}
+.login-container .login-right .log-form .one svg {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    padding: 6.5px;
+    right: -15px;
+    width: 20px;
+    border: 1px solid #ccc;
+    border-right: none;
+}
+.login-container .login-right .log-form .two {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+.login-container .login-right .log-form .two button {
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 10px 24px;
+    border-radius: 7px;
+    background: #1268B3;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+}
+.login-container .login-right .log-form .two p {
+    margin: 0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+.login-container .login-right .log-form .two a {
+    color: #ff0000;
+    font-size: 15px;
+    font-weight: 600;
+}
+.login-container .login-right .videos {
+    margin-bottom: 20px;
+}
+.login-container .login-right .box .b-one {
+    margin-bottom: 20px;
+}
+.login-container .login-right .box .b-one  {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.login-container .login-right .box .b-one  svg {
+    color: #ff0000;
+    margin-left: 10px;
+}
+.login-container .login-right .box .b-one  a {
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}

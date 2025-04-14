@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسجيل الدخول</title>
+    <link rel="icon" type="jpg" href="../static/img/logo.png" />
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/all.min.css" />
+    <link rel="stylesheet" href="../static/css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="login-left">
+              <div class="info">
+                <img src="../static/img/logo.png" alt="" />
+                <h2>جمهورية مصر العربية وزارة العمل</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="login-right">
+              <div class="log-form">
+                <h2>تسجيل الدخول</h2>
+                <form action="/login" method="POST">
+                    <div class="one">
+                        <label for="national_id">الرقم القومي:</label>
+                        <div class="group">
+                            <i class="fa fa-user"></i>
+                            <input
+                        placeholder="الرقم التاميني/الرقم القومي"
+                        type="text"
+                        id="national_id"
+                        name="national_id"
+                        required
+                        />
+                    </div>
+                    </div>
+                    <div class="one">
+                        <label for="password">كلمة المرور:</label>
+                        <div class="group">
+                            <i class="fa fa-lock"></i>
+                            <input
+                            placeholder="كلمة المرور"
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                            />
+                        </div>
+                    </div>
+                    <div class="two">
+                        <button type="submit">تسجيل الدخول</button>
+                        <p>
+                            ليس لديك حساب؟
+                            <a href="{{ url_for('register') }}">إنشاء حساب جديد</a>
+                        </p>
+                    </div>
+                </form>
+              </div>
+              <div class="videos">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="vid-one">
+                            <video preload="none" loading="lazy" style="width: 100%;" controls>
+                                <source src="../static/videoes/1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="vid-two">
+                            <video preload="none" loading="lazy" style="width: 100%;" controls>
+                                <source src="../static/videoes/2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="box">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="b-one">
+                            <i class="fa-solid fa-download c-grey p-absolute"></i>
+                            <a href="../static/videos/1.mp4" download="الفيديو الاول.mp4">[تنزيل الفيديو الجزء الاول]</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="b-one">
+                            <i class="fa-solid fa-download c-grey p-absolute"></i>
+                            <a href="../static/videos/2.mp4" download="الفيديو الثاني.pdf">[تنزيل الفيديو الجزء الثاني]</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="b-one">
+                            <i class="fa-solid fa-download c-grey p-absolute"></i>
+                            <a href="../static/img/جدول توصيف الاعمال.pdf" download="جدول توصيف الاعمال.pdf">[جدول توصيف الاعمال]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/bootstrap.bundle.js"></script>
+    <script src="../static/js/all.min.js"></script>
+  </body>
+</html>

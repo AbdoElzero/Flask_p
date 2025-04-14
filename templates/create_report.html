@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إنشاء تقرير</title>
+    <link rel="icon" type="jpg" href="../static/img/logo.png" />
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/css/all.min.css" />
+    <link rel="stylesheet" href="../static/css/create_report.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="container">
+        <div class="head">
+          <img src="../static/img/logo.png" alt="" />
+          <h2>وزارة العمل جمهورية مصر العربية</h2>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="head-two">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="left">
+                <h3>انشاء تقرير</h3>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="right">
+                <a href="{{ url_for('home') }}">الصفحة الرئيسية</a>
+                <em>></em>
+                <a href="{{ url_for('create_report') }}">انشاء تقرير جديد </a>
+                <em>></em>
+                <a href="{{ url_for('login') }}">تسجيل الخروج</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <form action="/create_report" method="POST">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="one">
+                <label for="field1">الاسم</label>
+                <input type="text" id="field1" name="field1" placeholder="الاسم رباعي" required />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="one">
+                <label for="field2">وصف العملية</label>
+                <input type="text" id="field2" name="field2" placeholder="وصف لنوع العمل" required />
+              </div>
+            </div>
+            <div class="col-md-4">
+                <div class="one">
+                  <label for="field3">رقم العملية / العقد</label>
+                  <input type="text" id="field3" name="field3" placeholder="رقم العملية / العقد" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="one">
+                  <label for="field4">القيمة المالية الاجمالية للعقد</label>
+                  <input type="text" id="field4" name="field4" placeholder="القيمة المالية الاجمالية للعقد" required />
+                </div>
+              </div>
+              <div class="col-md-8"></div>
+              <div class="col-md-8">
+                <div class="one">
+                  <label for="field5">ارقام الفواتير / ارقام الجاري</label>
+                  <input type="text" id="field5" name="field5" placeholder="جاري من الي او رقم الفاتورة" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="one">
+                  <label for="field6">نوع المستخلص / الفاتورة</label>
+                  <input type="text" id="field6" name="field6" placeholder="ادخل نوع المستخلص" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="one">
+                  <label for="field7">تاريخ البداية</label>
+                  <input type="date" id="field7" name="field7" value="2004-03-03" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="one">
+                  <label for="field8">تاريخ النهاية</label>
+                  <input type="date" id="field8" name="field8" value="2004-03-03" required />
+                </div>
+              </div>
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <div class="one">
+                  <label for="field9">رقم الايصال</label>
+                  <input type="text" id="field9" name="field9" placeholder="رقم الايصال" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="one">
+                  <label for="field10">حساب البريد المصري</label>
+                  <input type="text" id="field10" name="field10" placeholder="حسابك البريدي" required />
+                </div>
+              </div>
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <div class="one">
+                  <label for="field11">القيمة</label>
+                  <input type="text" id="field11" name="field11" placeholder="القيمة" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="one">
+                  <label for="field12">القيمة بالعربي</label>
+                  <input type="text" id="field12" name="field12" placeholder="القيمة بالعربي" required />
+                </div>
+              </div>
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <div class="one">
+                  <label for="field13">كود العقد</label>
+                  <input type="text" id="field13" name="field13" placeholder="ادخل الكود" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="one">
+                  <label for="field14">رقم المخالصة</label>
+                  <input type="text" id="field14" name="field14" placeholder="رقم المخالصة" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="one">
+                  <label for="field15">كلمة المرور</label>
+                  <input type="text" id="field15" name="field15" placeholder="كلمة المرور" required />
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="one">
+                  <label for="field16">تاريخ المستخلص / الفاتورة</label>
+                  <input type="date" id="field16" name="field16" value="2004-03-03" required />
+                </div>
+              </div>
+            </div>
+            <button type="submit">إنشاء التقرير</button>
+        </form>
+      </div>
+    </div>
+    <script src="../static/js/bootstrap.bundle.js"></script>
+    <script src="../static/js/all.min.js"></script>
+  </body>
+</html>
